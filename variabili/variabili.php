@@ -31,7 +31,7 @@
     //l'insegnante dice "è ora di (contenuto della variabile)"
 
         ?>
-       ciao
+   
 
 </body>
 
