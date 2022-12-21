@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operazioni</title>
+</head>
+
+<body>
+    <?php
+    //SOMMA
+    $a = 10;
+    $b = 2;
+    $c = $a + $b;
+    //echo '$c=' . $c;
+    echo '$a + $b = $c <br>';
+    echo "$a + $b = $c";
+    //si può scrivere il risultato di un'operazione senza memorizzarlo in una variabile 
+    echo "<br>";
+    echo $a + $b;
+    echo "<br>";
+    echo $a * $b;
+    echo "<br>";
+    echo "$a * $b =" . $a * $b; //dare priorità agli operatori come in matematica quindi questa stringa sarebbe "$a * $b =" . ($a * $b)
+echo "<br>";
+    $s = "stringa";
+    echo $s . $a;
+    echo "<br>";
+    //modulo è un operatore che si rappresenta con il % ed è il resto intero di una divisione cioè 5 % 2 vale 1 (il risultato intero è 1)
+    // modulo praticamente è fare pari e dispari perchè un numero pari è perfettamente divisibile e un numero dispari ha resto 1
+echo $a != $b; //restituisce 1 che significa che è vero (!= significa diverso)
+echo "<br>";
+echo $a == $b; //risultato booleano falso che non dà nulla
+echo "<br>";
+//echo $a = $b; //$b viene assegnato alla variabile a e d'ora in poi $a vale 2
+echo "<br>";
+
+//operatore ternario
+echo "a = $a e b= $b";
+    echo "<br>";
+    $risultato = ($a >= $b ? "a maggiore di b" : "b maggiore di a");
+    echo $risultato;
+    echo "<br>";
+    $risultato = ($a >= $b ? ( $a==$b? "a uguale b" : "a maggiore di b") : "b maggiore di a"); 
+    echo $risultato;
+    echo "<br>";
+//media
+    echo ($a + $b) / 2;
+    echo "<br>";
+    //invertire $a e $b
+echo "prima a = $a e b = $b <br>";
+    $temp = $a;
+    $a = $b;
+    $b = $temp;
+echo "dopo a = $a e b = $b <br>"
+
+
+    ?>
+
+
+</body>
+
+</html>
