@@ -11,7 +11,7 @@
 <body>
     <?php
     //non posso scrivere condizioni se non sono tra parentesi
-    if (true) { //olo la condizione tru viene presa in considerazione
+    if (true) { //solo la condizione true viene presa in considerazione
         echo "condizione vera";
     } else {
         echo "condizione falsa";
