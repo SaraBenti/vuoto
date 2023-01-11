@@ -11,10 +11,8 @@
 <body>
     <?php
 //quanti giorni mancano alla fine del mese?
-   echo date("d m Y");
+   echo date("d m Y");// echo date("d/m/Y"); per mettere gli slash
     echo "<br>";
-   echo date("d/m/Y");
-     echo "<br>";
 
    $m = date ("m");
    switch ($m){
@@ -34,6 +32,25 @@
 
     $giorni_mancanti = $giorni_del_mese - date("d");
     echo "giorni mancanti = $giorni_mancanti";
-
+echo "<hr>";
     //PER CASA: quanti giorni mancano al mio compleanno?
-    ?>
+
+    $t = date ("t");
+    switch ($t){
+        case 28: 
+            $numero_giorni = 28;
+            break;
+        case 31: 
+            $numero_giorni1 = 31;
+            break;
+        case 30:
+            $numero_giorni2 = 30;
+            break;
+         case 12:
+             $giorni_luglio=12;
+             break;
+    }
+    $giorni_al_compleanno = $giorni_mancanti + date ("28") + 2* date ("31") + 2* date ("30") + date ("12");
+    echo "giorni mancanti al mio compleanno = $giorni_al_compleanno";
+
+        ?>
