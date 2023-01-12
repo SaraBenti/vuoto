@@ -13,9 +13,9 @@
     //non posso scrivere condizioni se non sono tra parentesi
     if (true) { //solo la condizione true viene presa in considerazione
         echo "condizione vera";
-    } else {
-        echo "condizione falsa";
-    }
+    } //else {
+       // echo "condizione falsa";
+    
 
     echo "<br>";
     $x = 1;
