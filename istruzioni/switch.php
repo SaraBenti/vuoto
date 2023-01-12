@@ -34,23 +34,41 @@
     echo "giorni mancanti = $giorni_mancanti";
 echo "<hr>";
     //PER CASA: quanti giorni mancano al mio compleanno?
+  echo date ("12 7 1980");
+  $t = date ("t");
+  switch ($t) {
+    case 28: 
+        $mese = 2;
+    case 30:
+        $mese = 4;
+    case 31:
+        $mese = 3;
+  }
+  $giorni_al_compleanno = $giorni_mancanti + date("t");
+  echo $giorni_al_compleanno;
+  echo "<hr>";
 
-    $t = date ("t");
-    switch ($t){
-        case 28: 
-            $numero_giorni = 28;
-            break;
-        case 31: 
-            $numero_giorni1 = 31;
-            break;
-        case 30:
-            $numero_giorni2 = 30;
-            break;
-         case 12:
-             $giorni_luglio=12;
-             break;
-    }
-    $giorni_al_compleanno = $giorni_mancanti + date ("28") + 2* date ("31") + 2* date ("30") + date ("12");
-    echo "giorni mancanti al mio compleanno = $giorni_al_compleanno";
+
+    $data_attuale = date("d-m");
+    $data_fine = "12-07";
+    $giorni_rimanenti = 0;
+    
+    
+        switch ($data_attuale) {
+            case "01":
+                $giorni_rimanenti = 31 - date("01-12");
+                break;
+            case "02":
+            case "03":
+            case "04":
+            case "05":
+            case "06":
+                $giorni_rimanenti = -1;
+                break;
+            default:
+                $giorni_rimanenti = -1;
+        }
+    
+    echo $giorni_rimanenti;
 
         ?>
