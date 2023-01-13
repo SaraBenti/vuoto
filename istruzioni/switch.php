@@ -36,23 +36,6 @@ echo "<hr>";
     //PER CASA: quanti giorni mancano al mio compleanno? 
     //lavorare con 2 variabili giorno e mese
     
-    $z = date("z");
-    $data_inizio = (13- 01- 2023 );
-    $data_fine = (12-07-2023 );
-    switch ($z) {        
-        case 2:
-            $giorni_del_mese = 28;
-            break;
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            $giorni_del_mese = 30;
-            break;
-        default: $giorni_del_mese = 31;
-    }
-    $giorni_al_comple = (31 - $data_inizio) + ($data_fine);
-    echo $giorni_al_comple;
-    echo "<hr>";      
+    
         ?>
         </body>

@@ -22,10 +22,15 @@
     for ($i = 0; $i < 10; $i++){
          echo ($i+1). ") " .$a [$i] . "<br>";
 
-
     }
+
+    echo $a [0] + $a[1];
+ 
+    
    //→ho creato 10 posizioni con elemento 1
 
    //per casa media degli elementi dell'array $a
+
+
     ?>
     </body>
