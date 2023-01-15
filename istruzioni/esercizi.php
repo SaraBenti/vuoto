@@ -110,21 +110,23 @@ echo "<hr>";
 //cicli 7)
 $inizio = 10;
 $fine = 100;
-$num_dispari=0;
+$num_dispari=10;
 for ($i=$inizio; ($i>=$inizio)and($i<=$fine);$i++){
    if ($i%2==0){
     echo "$i è pari" . "<br>"; 
    }
    else {
     echo "$i è dispari" . "<br>";
-    $num_dispari++;
+  
+    }
    }
-    
+   for ($cont_dispari=$num_dispari; $cont_dispari<=($num_dispari+20); $cont_dispari++){
+       if ($cont_dispari%2==1){
+           echo $cont_dispari . "<br>" ;
+    } 
+else {
+    "condizione falsa";
 }
-echo $num_dispari;
-//come si elencano i primi dieci numeri?
-//esercizio da finire
-
-
+   }
 
     ?>
