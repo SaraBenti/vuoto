@@ -80,5 +80,51 @@ else {
 }
 echo "<hr>";
 //8)
+$testo = "C";
+if ($testo>=65){
+    if ($testo<=90){
+        echo "la prima lettera è maiuscola";
+    }
+    else {
+        if ($testo>=97){
+            if ($testo<=122){
+                echo "la prima lettera è minuscola";
+            }
+        }
+    }
+    echo "la prima lettera è minuscola";
+}
+echo "<hr>";
+//9)
+$x = 10;
+$a = 9;
+$b = 11;
+if ($a<$b){
+    if ($x<$b){
+        if ($x>$a){
+            echo "$x è compreso";
+        }
+    }
+}//non è finito fare con switch
+echo "<hr>";
+//cicli 7)
+$inizio = 10;
+$fine = 100;
+$num_dispari=0;
+for ($i=$inizio; ($i>=$inizio)and($i<=$fine);$i++){
+   if ($i%2==0){
+    echo "$i è pari" . "<br>"; 
+   }
+   else {
+    echo "$i è dispari" . "<br>";
+    $num_dispari++;
+   }
+    
+}
+echo $num_dispari;
+//come si elencano i primi dieci numeri?
+
+
+
 
     ?>
