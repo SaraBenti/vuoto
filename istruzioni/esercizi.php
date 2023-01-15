@@ -123,7 +123,7 @@ for ($i=$inizio; ($i>=$inizio)and($i<=$fine);$i++){
 }
 echo $num_dispari;
 //come si elencano i primi dieci numeri?
-
+//esercizio da finire
 
 
 
