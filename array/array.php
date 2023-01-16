@@ -30,7 +30,7 @@
    //→ho creato 10 posizioni con elemento 1
 
    //per casa media degli elementi dell'array $a
-
+    
 
     ?>
     </body>
