@@ -11,7 +11,7 @@
 <body>
     <?php
 echo date ("d m y") . "<br>";
-$m = date ("m");
+$d = date ("d");
 $y = date ("y");
 $inizio =10;
 $ripetizioni = 10;
@@ -32,7 +32,7 @@ for ($i=$inizio; ($i>0) and ($i<($inizio+$ripetizioni)) and ($i<$y);$i++){
         $multipli++;
     }
     echo "<span style='color:red'>";
-    if ($i==$m){
+    if ($i==$d){
         echo "<strong>";
         echo $i;
         echo "</strong>";
