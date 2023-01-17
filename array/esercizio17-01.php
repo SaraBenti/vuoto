@@ -9,7 +9,7 @@
 <body>
     <?php
 //inizializzo l'array $eta //per verificare se sto facendo bene l'inizializzazione c'è la funzione print_r oppure var_dump
-//il ciclo per inizializzare lo lasciamo per primo e separat
+//il ciclo per inizializzare lo lasciamo per primo e separato
 $eta =[]; //questo è opzionale
 for($i=0;$i<10;$i++){
         $eta[$i] = rand(0, 90); //ui sto dicendo prendi 10 elementi e dagli valore random
