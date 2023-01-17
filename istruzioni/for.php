@@ -86,5 +86,9 @@
         }
      }
 
+//numero medio di 5 estrazioni casuali
+//numeri casuali da 0 a 100
+//verificare se $num= al numero medio
+
 
 ?>

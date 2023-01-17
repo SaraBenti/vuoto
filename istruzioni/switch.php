@@ -35,7 +35,27 @@
 echo "<hr>";
     //PER CASA: quanti giorni mancano al mio compleanno? 
     //lavorare con 2 variabili giorno e mese
-    
-    
+    $giorni_manc_anno = 365 - $giorni_mancanti ;
+    echo $giorni_manc_anno;
+    $d = date("d");
+    switch ($m){
+        case 1: $giorni_alla_fine_anno=365-$d;
+        break;
+        case 2: $giorni_alla_fine_anno = 365 - (31+$d);
+        break;
+        case 3: $giorni_alla_fine_anno = 365 - (31+28+$d);
+        break;
+        case 4: $giorni_alla_fine_anno = 365 - (31+28+31+$d);
+        break;
+        case 5: $giorni_alla_fine_anno = 365 - (31+28+31+30+$d);
+        break;
+        case 6: $giorni_alla_fine_anno = 365 - (31+28+31+30+31+$d);
+        break;
+        case 7: $giorni_alla_fine_anno = 365 - (31+28+31+30+31+30+$d);
+        break;
+        case 8 : $giorni_alla_fine_anno = 365 - (31+28+31+30+31+30++31+$d)
+        break;
+        case 12: $giorni_alla_fine_anno - $d;
+   }
         ?>
         </body>

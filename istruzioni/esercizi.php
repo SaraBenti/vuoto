@@ -128,5 +128,15 @@ else {
     "condizione falsa";
 }
    }
+    echo "<hr>";
+//8)
+    $inizio = 1;
+    $ripet = 0;
+    for($i=$inizio;($i<100);$i++){
+        if ($i%7==0){
+            echo $i;
+        }
+        
+    }
 
     ?>
