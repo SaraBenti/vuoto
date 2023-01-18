@@ -135,8 +135,22 @@ else {
     for($i=$inizio;($i<100);$i++){
         if ($i%7==0){
             echo $i;
-        }
-        
+        }       
     }
+    echo "<hr>";  
+//ristorante
+$antonio=18;
+echo $antonio."<br>";
+$bruno=18;
+$carlo=19;
+$media=($antonio+$bruno+$carlo)/3;
+echo $media."<br>";
+$tot=$antonio+$bruno+$carlo;
+$arr= 3-($tot %3);
+$pro= ($tot+$arr)/3;
+echo $arr . "<br>";
+echo $pro . "<br>";
+
+
 
     ?>
