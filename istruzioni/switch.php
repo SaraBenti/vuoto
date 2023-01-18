@@ -53,8 +53,17 @@ echo "<hr>";
         break;
         case 7: $giorni_alla_fine_anno = 365 - (31+28+31+30+31+30+$d);
         break;
-        case 8 : $giorni_alla_fine_anno = 365 - (31+28+31+30+31+30++31+$d)
+        case 8: $giorni_alla_fine_anno = 365 - (31+28+31+30+31+30+31+$d);
         break;
+        case 9:
+            $giorni_alla_fine = 365 - (31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + $d);
+            break;
+        case 10:
+                $giorni_alla_fine = 365 - (31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 +30+ $d);
+                break;  
+        case 11:
+                    $giorni_alla_fine = 365 - (31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 +30+31+ $d);
+                    break;           
         case 12: $giorni_alla_fine_anno - $d;
    }
         ?>
