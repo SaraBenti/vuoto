@@ -19,6 +19,7 @@ for($i=0;$i<10;$i++){
 
     //faccio il ciclo che conta tutti gli elementi dell'array
     $max = $eta[0]; //anche $max = 0 va bene 
+    $indice = 0;
     $neonati = 0;
     $eta_maggiorenni = 0;
     $numero_maggiorenni = 0;
@@ -43,6 +44,7 @@ for($i=0;$i<10;$i++){
         //trova il più anziano
         if ($eta[$i]>$max){
             $max = $eta[$i];
+            $indice = $i;
         }
         //numero neonati
         if($eta[$i]==0){
@@ -52,7 +54,7 @@ for($i=0;$i<10;$i++){
         
     }
     echo "<table border=1><tr><td>";
-    echo "<br> Il più anziano ha $max anni(e si trova ad indice????)";
+    echo "<br> Il più anziano ha $max anni(e si trova ad indice $indice )";
     echo "<br> Il numero dei neonati è $neonati ";
     echo "<br> L'età media dei maggiorenni è " . 
     (($numero_maggiorenni>=0) ?
