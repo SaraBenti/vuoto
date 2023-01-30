@@ -38,7 +38,7 @@
     echo "<br>";
     echo '3) l\'insegnante dice "è ora di '.$s. '"';
 
-
+ 
 
 
     ?>
