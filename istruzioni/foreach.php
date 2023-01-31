@@ -8,8 +8,7 @@
 </head>
 <body>
     <?php
-    $a = ['mario' => 3, 'giacomo' => 10, 'maria' => 10, 'simone' => 10, 'giuseppe' => 8, 'prof'=>"Rossi"]; //gli indici hanno apice singolo
-    $a ['prof']= "Adriano Amadei";
+    $a = ['mario' => 3, 'giacomo' => 10, 'maria' => 10, 'simone' => 10, 'giuseppe' => 8, 'materia'=>"html", 'prof'=>""]; //gli indici hanno apice singolo
     $a ['coordinatore'] = "Sara Forlivesi";
 
     foreach($a as $chiave=>$val){
