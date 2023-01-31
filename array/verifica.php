@@ -56,7 +56,7 @@ for ($i=0;$i<count($voti);$i++){
         $volte_min= ($min+1);// sbagliato bisogna fare un altro if mentre qui bisogna stabilire $volte_min=0
         //if ($voti[$i]==$min){$volte_min==0}
     }
-    echo "<div style='background-color:$col'>";
+    echo "<div style='background-color:$col'>";//chiudere il div
 }
 
 echo "</ol>";
