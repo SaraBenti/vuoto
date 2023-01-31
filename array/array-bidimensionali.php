@@ -56,6 +56,59 @@ foreach ($s as $studente){
     }
     echo "</tr>";
 }
+echo "<hr>";
+$p1= ['nome1'=>"Primini Primo",'nome2'=>"Secondini Secondo"];
+$p2=['nome1'=>"Giannini Gianni", 'nome2'=>"Stefanini Stefano", 'nome3'=>"Mariolini Maria", 'nome4'=>"Giacomini Giacomo"];
+$p3=['nome1'=>"Violetti Viola", 'nome2'=>"Gaietti Gaia"];
+$p2[]="Novella Novellini";
+$corsi=['corso1'=>"Autocad", 'corso2'=>"Informatica", 'corso3'=>"Inglese"];
+//print_r($partecipanti);
+//print_r($corsi);
+$autocad=[$p1];
+$informatica=[$p2];
+$inglese=[$p3];
+$num_autocad=0;
+$num_informatica=0;
+$num_inglese=0;
+$numero=0;
+$maggiore=0;
+
+foreach ($p1 as $kia=>$val){
+        echo $val;
+        echo "<br>";
+        $num_autocad++;        
+    }
+    foreach ($p2 as $kiav=>$valo){
+        echo $valo;
+        echo "<br>";
+        $num_informatica++;        
+    }
+    foreach ($p3 as $kiave=>$valor){
+        echo $valor;
+        echo "<br>";
+        $num_inglese++;        
+    }
+foreach ($corsi as $khiave=>$valore){
+    echo $valore;
+    echo "<br>";
+    $numero++;
+}
+$numero_medio=($num_autocad+$num_informatica+$num_inglese)/$numero;
+echo "il numero medio dei partecipanti ai corsi è ". $numero_medio;
+echo "<br>";
+$partecipanti[]=$num_autocad;
+$partecipanti[]=$num_informatica;
+$partecipanti[]=$num_inglese;
+print_r($partecipanti);
+echo "<br>";
+$max=$partecipanti[0];
+for ($i=0;$i<count($partecipanti);$i++){
+    if($partecipanti[$i]>$max){
+        $max=$partecipanti[$i];
+    }
+}
+echo "il numero massimo di partecipanti ai corsi è ". $max;
+
 
 ?>
 
