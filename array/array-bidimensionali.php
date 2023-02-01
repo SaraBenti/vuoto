@@ -48,14 +48,16 @@ echo "</table>";
 //per casa creare la tabella sopra
 //senza conoscere le chiavi dei singoli elementi di $s
 //2 foreach innestati
-
 foreach ($s as $studente){
+    echo "<table border=1>";
     echo "<tr>";
     foreach ($studente as $k=>$v){
         echo "<td> $v </td>";
     }
     echo "</tr>";
+    echo "</table>";
 }
+
 echo "<hr>";
 $p1= ['nome1'=>"Primini Primo",'nome2'=>"Secondini Secondo"];
 $p2=['nome1'=>"Giannini Gianni", 'nome2'=>"Stefanini Stefano", 'nome3'=>"Mariolini Maria", 'nome4'=>"Giacomini Giacomo"];
