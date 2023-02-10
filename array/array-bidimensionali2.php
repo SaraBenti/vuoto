@@ -61,13 +61,18 @@ $corsi=["Autocad", "Informatica", "Inglese"];
 //             echo $nome ."<br>";
 //         }       
 // } //questo sarebbe il punto 2  con i cicli for: stampa gli elementi
-
 //punto 2 con foreach:stampa gli elementi
+foreach ($partecipanti as $p){
+    foreach ($p as $nome){
+        echo $nome . "<br>";
+    }
+}
     $somma = 0;
-    $corso_max_partecipanti=0;
+    $max_partecipanti=0;
     //$primo_array_di_partecipanti= $partecipanti[0]
     if ($partecipanti) {
         $max_partecipanti = count($partecipanti[0]); //dinamicamente metto il primo valore degli elementi dell'array
+    $corso_max_partecipanti="";
     }
 
     foreach ($partecipanti as $indice => $p) {
@@ -93,7 +98,7 @@ $corsi=["Autocad", "Informatica", "Inglese"];
                 //svuoto l'array
                 $corsi_max_partecipanti = [];
             }
-            $corsi_max_partecipanti[$corsi[$indice]];
+            $corsi_max_partecipanti[]=$corsi[$indice];
         }
             echo "elenco dei partecipanti del corso " . $corsi[$indice] . "<br>";
             echo "<ol>";
@@ -106,16 +111,16 @@ $corsi=["Autocad", "Informatica", "Inglese"];
         //punto 1 faccio l'if sotto il primo if
         echo "<hr>";
         if ($corsi) { //verificare che ci sia almeno un elemento perchè una divisione con 0 denominatore non si può fare
-            echo "la media vale " . $somma / count($corsi);
+            echo "<br>3)la media vale " . ($somma / count($corsi));
         echo "<br> 4)corso con max partecipanti: " . $corso_max_partecipanti;
         echo "<br>4bis) ";
         foreach ($corsi_max_partecipanti as $c){
             echo "$c ";
         }
-        } else {
+        } else {//se è falso l'array è vuoto
             echo "non ci sono corsi";
         }
-
+echo "<hr>";
         //6) aggiungi un elemento all'array che è il nome del corso
         foreach($partecipanti as $i=>$p){
         $p['corso'] = $corsi[$i];
