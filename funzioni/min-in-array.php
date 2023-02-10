@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * funzione che riceve un parametro in ingresso e restituisce il minimo
+ * @param array $a
+ * @return il minimo dei valori letti nell'array
+ */
+
 function min_in_array($a){ 
     foreach ($a as $v){
         if  (! isset($min)){//entro solo alla prima iterazione

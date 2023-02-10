@@ -1,12 +1,12 @@
 <?php
 /**
  * restituisce la stringa con tutti i dati dello strudente
+ * @param array $a
  * @return string
  */
 function elenco_dati_studente($a){
-    $stringa=" ";
     foreach ($a as $k=>$v){
-       $stringa.= "$k: $v ";
+       $stringa = "$k: $v ";
 
     }
 
@@ -21,6 +21,7 @@ function elenco_dati_studente($a){
  */
 function count_studenti_corso($studenti, $corso){
     $tot=0;
+    $corso=" ";
     foreach ($studenti as $studente){
         if (($studente ['corso'])== $corso){
             $tot++;
@@ -91,7 +92,7 @@ foreach ($partecipanti as $p){
         // }
 
         //4)con variante:tutti i corsi che hanno il max numero di partecipanti→array
-        if ($max_partecipanti < $numero_partecipanti) {
+        if ($max_partecipanti <= $numero_partecipanti) {
             if($max_partecipanti<$numero_partecipanti){
                 //ho trovato un nuovo max?
                 $max_partecipanti = $numero_partecipanti;

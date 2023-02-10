@@ -1,3 +1,27 @@
+<?php
+/**
+ * funzione massimo numero o stringa di un array
+ * 
+ * @param array $a
+ * @return $max
+ */
+
+
+function massimo_partecipanti($a){
+    foreach($a as $val){
+        if(! isset($max)){
+        $max=$val;
+        }
+        if ($max<$val){
+            $max=$val;
+        }
+    }
+    return $max;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,12 +127,14 @@ $partecipanti[]=$num_informatica;
 $partecipanti[]=$num_inglese;
 print_r($partecipanti);
 echo "<br>";
-$max=$partecipanti[0];
-for ($i=0;$i<count($partecipanti);$i++){
-    if($partecipanti[$i]>$max){
-        $max=$partecipanti[$i];
-    }
-}
+
+// $max=$partecipanti[0];
+// for ($i=0;$i<count($partecipanti);$i++){
+//     if($partecipanti[$i]>$max){
+//         $max=$partecipanti[$i];
+//     }
+// }
+$max= massimo_partecipanti($partecipanti);
 echo "il numero massimo di partecipanti ai corsi è ". $max;
 
 
