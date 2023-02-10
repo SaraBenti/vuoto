@@ -1,3 +1,37 @@
+<?php
+/**
+ * restituisce la stringa con tutti i dati dello strudente
+ * @return string
+ */
+function elenco_dati_studente($a){
+    $stringa=" ";
+    foreach ($a as $k=>$v){
+       $stringa.= "$k: $v ";
+
+    }
+
+    return $stringa;
+}
+
+/**
+ * conta gli studenti con chiave corso= a $corso
+ * @param array $studenti array bidimensionale degli studenti
+ * @param stringa $corso nome del corso da cercare
+ * @return int totale studenti del corso
+ */
+function count_studenti_corso($studenti, $corso){
+    $tot=0;
+    foreach ($studenti as $studente){
+        if (($studente ['corso'])== $corso){
+            $tot++;
+        }
+    }
+    return $tot;
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,21 +123,46 @@ $corsi=["Autocad", "Informatica", "Inglese"];
         echo "<br>---<br>";
         }
 
-
+echo "<hr>";
     //avvio esercizio alternativo per casa
-    $s1=['cognome'=>"Rossi",'nome'=>"Mario",'corso'=>"Informatica"];
-    $s2 = ['cognome' => "Rossi", 'nome' => "Mario", 'corso' => "Informatica"];
-    $s3 = ['cognome' => "Rossi", 'nome' => "Mario", 'corso' => "Informatica"];
+    $s1= ['cognome'=>"Rossi",'nome'=>"Mario",'corso'=>"Informatica"];
+    $s2 = ['cognome' => "Rossini", 'nome' => "Mariolino", 'corso' => "Inglese"];
+    $s3 = ['cognome' => "Bossi", 'nome' => "Maria", 'corso' => "Informatica"];
     $studenti = [$s1, $s2, $s3];
 
-    $corsi = [];
+    
+        //aggiunta di uno studente nel primo indice disponibile (questo c'è nella verifica)
+    $nuovo_studente[] = ['cognome' => "novellini", 'nome' => "Novella"];
+    $studenti[] = $nuovo_studente;
+    //se aggiungo un elemento in questo modo me lo mette nella chiave 0
+    //$s1[]= "simpatico";
+    //si va sempre a incrementare rispetto all'ultimo indice inserito
 
-    $studenti[] = ['cognome' => "novellini", 'nome' => "Novella"];
+
+
     foreach ($studenti as $studente){
-        echo $studente['cognome'];
-        $corsi['informatica']++;
+       //questo se non conosco la chiave
+       // foreach($studenti as $k=>$v){
+        //    if ($k=="cognome"){
+         //       echo $v;// la stessa cosa è $studente[$k];
+            
+        
+        //2
+        //creiamo una funzione per elencare i dati studenti
+        echo "<br>". elenco_dati_studente($studente);
+
+
+        //ho reato la funzione invece di questo di seguito
+        //echo $studente['cognome'] . "<br>";
+        //$corsi['informatica']++;
         //$studente['corso']
     }
+//scrivere una funzione che conta gli studenti di un corso generico
+    $corso= $studente['corso'];
+    echo "<br> studenti totali: ". count_studenti_corso($studenti, $corso );
+
+    //3  4 
+    $nome
 
 
 
