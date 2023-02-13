@@ -5,8 +5,9 @@
  * @return string
  */
 function elenco_dati_studente($a){
+    $stringa="";
     foreach ($a as $k=>$v){
-       $stringa = "$k: $v ";
+       $stringa .= "$k: $v <br>";
 
     }
 
@@ -14,16 +15,15 @@ function elenco_dati_studente($a){
 }
 
 /**
- * conta gli studenti con chiave corso= a $corso
+ * conta gli studenti con chiave corso= $corso
  * @param array $studenti array bidimensionale degli studenti
- * @param stringa $corso nome del corso da cercare
+ * @param string $corso nome del corso da cercare
  * @return int totale studenti del corso
  */
 function count_studenti_corso($studenti, $corso){
     $tot=0;
-    $corso=" ";
-    foreach ($studenti as $studente){
-        if (($studente ['corso'])== $corso){
+    foreach ($studenti as $s){
+        if (($s['corso'])== $corso){
             $tot++;
         }
     }
@@ -167,8 +167,8 @@ echo "<hr>";
     $corso= $studente['corso'];
     echo "<br> studenti totali: ". count_studenti_corso($studenti, $corso );
 
-    //3  4 
-    $nome
+//3  4 
+  
 
 
 
