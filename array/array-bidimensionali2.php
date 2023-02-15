@@ -138,12 +138,12 @@ echo "<hr>";
 
     
         //aggiunta di uno studente nel primo indice disponibile (questo c'è nella verifica)
-    $nuovo_studente[] = ['cognome' => "novellini", 'nome' => "Novella"];
-    $studenti[] = $nuovo_studente;
+   
+    $studenti[] = ['cognome' => "novellini", 'nome' => "Novella"];
     //se aggiungo un elemento in questo modo me lo mette nella chiave 0
     //$s1[]= "simpatico";
     //si va sempre a incrementare rispetto all'ultimo indice inserito
-
+        var_dump($studenti);
 
 
     foreach ($studenti as $studente){

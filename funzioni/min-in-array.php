@@ -6,7 +6,7 @@
  * @return $min minimo dei valori letti nell'array
  */
 
-function min_in_array($a){ 
+function min_in_array($a){ //isset cerca se quel valore è inizializzato($min)
     foreach ($a as $v){
         if  (! isset($min)){//entro solo alla prima iterazione
             //non è settata se è la prima iterazione

@@ -50,6 +50,7 @@ $domande=[$domanda1, $domanda2, $domanda3];
         $elenco_categorie[$domanda['categoria']]=1;
     }
 }
+var_dump($elenco_categorie);
     //cerco la categoria che ha più domande
     $massimo=0;
     foreach($elenco_categorie as $key=>$value){
@@ -113,6 +114,7 @@ echo "<br>";
 
  $costo=0.5*count($domande);
  echo "l'azienda ha speso ".$costo;
+ echo number_format($costo,1,",", ".");
 ?>
 </body>
 </html>
