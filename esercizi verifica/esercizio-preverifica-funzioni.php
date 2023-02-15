@@ -55,7 +55,7 @@ $categorie=tipo_categorie('categoria',$domande);
 var_dump($categorie);
 echo "<br>";
 /**
- * cerco il valore ripetuto più volte di una chiave
+ * cerco il valore ripetuto max volte di una chiave
  * @param array
  * @return $max_cat
  */
@@ -83,7 +83,22 @@ echo "il valore della chiave categoria più ripetuto è ".$max_cat."<br>";
  * @return $array
  */
 
- 
+ function max_chiave_e_nr_volte($array){
+    foreach($array as $k=>$val){
+        if(! isset($max)){
+        $max=$val;
+        $max_cat=$k;
+        }
+        if ($max<$val){
+            $max=$val;
+            $max_cat=$k;
+            $max_e_nr['categoria']=$max;
+            $max_e_nr['valore']=$max_cat;
+        }
+       
+    }
+    return $max_e_nr;
+ }//non viene
 
     ?>
 </body>
