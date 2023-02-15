@@ -9,11 +9,11 @@
 <body>
     <?php
 $domanda1=array('categoria'=>"commerciale",'risposta corretta'=>0);
-$domanda2=array('categoria'=>"assistenza",'risposta corretta'=>1);
+$domanda2=array('categoria'=>"commerciale",'risposta corretta'=>1);
 $domanda3=array('categoria'=>"assistenza",'risposta corretta'=>0);
 $domande=[$domanda1, $domanda2, $domanda3];
 
-//elenco categorie senza ripetizioni
+//1)elenco categorie senza ripetizioni
 $elenco_categorie=array();
 $conteggio_risposte_corrette=0;
 foreach($domande as $domanda){    
@@ -22,15 +22,16 @@ foreach($domande as $domanda){
                 $conteggio_risposte_corrette++;
             }       
 }
-//var_dump($elenco_categorie);
+        //var_dump($elenco_categorie);
 $elenco_categorie=array_unique($elenco_categorie);
-//var_dump($elenco_categorie);
+    //var_dump($elenco_categorie);
+//2)
 foreach($elenco_categorie as $e){
     echo "categoria ".$e."<br>";   
 }
 echo "le risposte corrette sono ".$conteggio_risposte_corrette."<br>";
-
-//creo un array che elenca tutte le categorie
+//3)
+//creo un array che elenca tutte le categorie e il numero di volte (che diventa il valore)
 /**
  * @param mixed array
  * @return array
@@ -49,9 +50,10 @@ foreach($domande as $domanda){
 return $tipo_categorie;
 }
 
-var_dump(tipo_categorie('categoria',$domande));
-$categorie=tipo_categorie('categoria',$domande);
 
+$categorie=tipo_categorie('categoria',$domande);
+var_dump($categorie);
+echo "<br>";
 /**
  * cerco il valore ripetuto più volte di una chiave
  * @param array
@@ -71,8 +73,18 @@ $categorie=tipo_categorie('categoria',$domande);
     }
     return $max_cat;
  }
+$max_cat= max_chiave($categorie);
+echo "il valore della chiave categoria più ripetuto è ".$max_cat."<br>";
 
-echo max_chiave($categorie)."<br>";
+//4)
+/**
+ * cerco quante volte è ripetuto il valore più ripetuto di un array
+ * @param array
+ * @return $array
+ */
+
+ 
+
     ?>
 </body>
 </html>

@@ -106,6 +106,8 @@ echo "<br>";
  }
  var_dump(most_used_2($domande));
  echo "<br>";
+ $risultato2=most_used_2($domande);
+ echo "la categoria più utilizzata è ".$risultato. "usata volte ".$risultato2['valore'];
  //--------------------------------------------------------------------------------------------------
 
 // 5. se ogni risposta alle domande costasse all'azienda 50 centesimi di euro, quanto sarebbe
