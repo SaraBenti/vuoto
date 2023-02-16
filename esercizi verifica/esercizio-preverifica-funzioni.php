@@ -83,7 +83,7 @@ echo "il valore della chiave categoria più ripetuto è ".$max_cat."<br>";
  * @return $array
  */
 
- function max_chiave_e_nr_volte($array){
+ function max_chiave_e_nr_volte($array){//
     foreach($array as $k=>$val){
         if(! isset($max)){
         $max=$val;
@@ -99,6 +99,9 @@ echo "il valore della chiave categoria più ripetuto è ".$max_cat."<br>";
     }
     return $max_e_nr;
  }//non viene
+
+
+
 
     ?>
 </body>
