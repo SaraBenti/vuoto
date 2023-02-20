@@ -87,12 +87,12 @@
         }
         //in questo modo non modifico categorie
         //=>
-        foreach ($categorie as $c=>$categoria){
-            $categorie[$c]['anno']= date("Y");//gli do una chiave
-            $categorie[$c][]=125;//aggiunge in $categorie[$c]con indice il primo disponibile
+        foreach ($categorie as $c => $categoria) {
+            $categorie[$c]['anno'] = date("Y"); //gli do una chiave
+            $categorie[$c][] = 125; //aggiunge in $categorie[$c]con indice il primo disponibile
         }
 
-        
+
         var_dump($categorie);
         //punto 7
         $array = array();
