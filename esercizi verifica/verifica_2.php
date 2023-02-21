@@ -70,14 +70,16 @@ function totale_persone($array, $chiave)
     //chiave è il mese di competenza e valore l'incasso del mese tenendo conto che ogni mese 
     //l'incasso è cresciuto di 200
     $incassi = [];
-    for ($i = $mese; $i < ($mese + 12); $i++) {
-        $incassi[$mese] = $totale_incasso;
+    $m=date('n');
+    for ($i = $m; $i < ($m + 12); $i++) {
+        $incassi[$m] = $totale_incasso;
         $totale_incasso = $totale_incasso - 200;
-        $mese = $mese - 1;
+        $m = $m - 1;
     }
     var_dump($incassi);
 
-    //Fatal error: Allowed memory size of 536870912 bytes exhausted (tried to allocate 671088640 bytes) in C:\xampp\htdocs\php\esercizi verifica\verifica_2.php on line 72
+    //Fatal error: Allowed memory size of 536870912 bytes exhausted (tried to allocate 671088640 bytes) in C:\xampp\htdocs\php\esercizi
+    // verifica\verifica_2.php on line 72
     ?>
 </body>
 

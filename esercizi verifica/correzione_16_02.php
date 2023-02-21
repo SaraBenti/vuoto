@@ -136,9 +136,11 @@
      array_push($dati[$i], date("Y"));
  }
  //print_r($dati);
- 
+ echo "<hr>";
+
+
  ?>
-?>
+
 
     
 </body>
