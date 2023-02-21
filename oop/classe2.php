@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-
+// come il file classe1 ma senza $stringa
 class Esempio{
     public $stringa="";
     
@@ -23,7 +23,7 @@ class Esempio{
     }
 }
 $e= new Esempio();
-$e->stampaQualcosaInGrassetto("ciao");
+$e->stampaQualcosaInGrassetto("stringa da stampare");
 echo "<hr>";
 
 ?>

@@ -17,32 +17,37 @@ class Esempio{
     }
     function stampaStringa(){
         echo $this->stringa;
-        echo "<br>";
+       
     }
     function stampaStringaInGrassetto(){
         echo "<b>";
        $this->stampaStringa();//significa qui dentro prendi il metodo stampaStringa
-        echo "</b><br>";
+        echo "</b>";
     }
     function stampaStringaInCorsivo(){
         echo "<i>";
        $this->stampaStringa();
-        echo "</i><br>";
+        echo "</i>";
     }
     function stampaStringaConTag($tag){
         echo "<$tag>";
        $this->stampaStringa();
-        echo "</$tag><br>";
+        echo "</$tag>";
     }
 }
 $e1=new Esempio("stringa dinamica da stampare");//non posso mettere un parametro d'ingresso non essendoci il construct
 $e2=new Esempio("seconda stringa da stampare");
 $e1->stampaStringa();
+echo "<br>";
 $e1->stampaStringaInGrassetto();
+echo "<br>";
 $e1->stringa="Nuovo valore di stringa";
-$e1->stampaStringaInGrassetto();
+$e1->stampaStringaInCorsivo();
+echo "<br>";
 $e2->stampaStringa();
-$e1->stampaStringaConTag("b");
+echo "<br>";
+$e1->stampaStringaConTag("div");
+echo "<br>";
 
 ?>
 </body>

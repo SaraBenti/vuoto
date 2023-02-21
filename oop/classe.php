@@ -33,16 +33,37 @@
         }
         //metodo eta che restituisce l'età dello studente
         function eta(){
-            //se mese-giorno corrente> mese-giorno di nascita allora ok
+            if(date("m")<substr($this->dataNascita,4,2)){
+            //se mese-giorno corrente> mese-giornoDataNascita allora ok
             $annoDataNascita= substr($this->dataNascita,0,4);
             $eta= date("Y")-$annoDataNascita;
+        }
+            else{
             //altrimenti
             //$eta -=1;
+            $annoDataNascita= substr($this->dataNascita,0,4);
+            $eta=(date("Y")-$annoDataNascita)-1;
+            }
             return $eta;
         }
         //metodo setVoti che inizializza l'array dei voti
+        function setVoti($voti){
+        
+            $this->voti=$voti[]=$voti;
+            
+            return $voti;
+        }
         //metodo SetPassword che comprende la validazione della passw di classroom: lunghezza minima 10 caratteri
         //contenere almeno 1 numero e una maiuscola
+        function setPassword($password){
+            if(strlen($password)<8){
+                return false;
+            }
+            if(! is_numeric($password)){
+                return false;
+            }
+            $this->password=$password;
+        }
     }
 
 
@@ -54,9 +75,11 @@
     //valore che ha attualmente s1 perchè l'echo era precedente al cambiamento di valore
     echo $s1->nome;
     echo "<br>";
-    $s1-> setdataNascita('1980-10-21') ;
+    $s1-> setdataNascita('1980-03-23') ;
     echo $s1->eta();
     echo "<hr>";
+    $s1-> setVoti(5);
+    var_dump($voti);
     
     $s2 = new Studente("Bruno", "Bianchi");
     ?>
