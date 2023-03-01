@@ -31,7 +31,19 @@
         $st->execute();
         echo "statement eseguito";
         //5 fetch=metodo dello statement è il fetch per ottenere l'elenco dei dati richiesti(solo con select); $righe sarà un array con tutti i dati
-        $righe = $st->fetchAll(PDO::FETCH_ASSOC); // mi restituisce l'array bidimensionale
+        //$righe = $st->fetchAll(PDO::FETCH_ASSOC); // mi restituisce l'array bidimensionale
+        
+        $sql1="INSERT INTO regioni(regione,area_geografica)
+        VALUES ('test2','sud')";
+        $st1=$con->prepare($sql1);
+        echo "secondo statement preparato";
+        $st1->execute();
+        echo "secondo statement eseguito";
+
+        $sql2="SELECT* FROM regioni";
+        $st2=$con->prepare($sql2);
+        $st2->execute();
+        $righe=$st2->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo "Errore di connessione";
         echo $e->getMessage();

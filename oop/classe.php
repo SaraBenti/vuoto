@@ -55,6 +55,7 @@
             foreach($voti as $voto){
                 if($voto>=1 AND $voto<=100){
                     //voto accettabile
+                    return true;
                 }else{
                     //voto non accettabile
                     return false;
@@ -62,7 +63,9 @@
             }
             $this->voti=$voti;
         }
-        function getVoti()
+        function getVoti(){
+            return $this->voti;
+        }
         //metodo SetPassword che comprende la validazione della passw di classroom: lunghezza minima 10 caratteri
         //contenere almeno 1 numero e una maiuscola
         function setPassword($p){
@@ -72,20 +75,22 @@
                $c= substr($p,$i,1); //verifico ogni carattere della stringa
                //controllo $c
                //compreso tra 0 e 9 se vero $condizione_1_numero=true
+               if($c>=0 AND $c<=9){
+                $condizione_1_numero=true;
+               }
                //compreso tra A e Z
+               if ($c>="A" AND $c<="Z"){
+                $condizione_1_maiuscola=true;
+               }
             }
             if ($condizione_1_numero && $condizione_1_maiuscola){
                 //password ok
+                $p=true;
             }else {
                 //password non corretta
+                echo "la password non risponde ai criteri richiesti";
             }
-            if(strlen($password)<8){
-                return false;
-            }
-            if(substr($password)){
-                return false;
-            }
-            $this->password=$password;
+            return $this->password=$p;
         }
     }
 
@@ -106,6 +111,7 @@
     
     $s2 = new Studente("Bruno", "Bianchi");
     $s2->setVoti([60,100,51,81]);
+    $s2->setPassword("123456789");
     ?>
 </body>
 
