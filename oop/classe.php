@@ -47,19 +47,42 @@
             return $eta;
         }
         //metodo setVoti che inizializza l'array dei voti
-        function setVoti($voti){
-        
-            $this->voti=$voti[]=$voti;
-            
-            return $voti;
+        function setVoti($voti){ //$voti esiste solo qui dentro questa funzione
+            if(! $voti){//se non è un array e quindi non ha valori
+                return false;
+            }
+            //i voti devono essere compresi tra 1 e 100
+            foreach($voti as $voto){
+                if($voto>=1 AND $voto<=100){
+                    //voto accettabile
+                }else{
+                    //voto non accettabile
+                    return false;
+                }
+            }
+            $this->voti=$voti;
         }
+        function getVoti()
         //metodo SetPassword che comprende la validazione della passw di classroom: lunghezza minima 10 caratteri
         //contenere almeno 1 numero e una maiuscola
-        function setPassword($password){
+        function setPassword($p){
+            $condizione_1_numero=false;
+            $condizione_1_maiuscola=false;
+            for ($i=0;$i<strlen($p)|| ($condizione_1_numero AND $condizione_1_maiuscola );$i++){
+               $c= substr($p,$i,1); //verifico ogni carattere della stringa
+               //controllo $c
+               //compreso tra 0 e 9 se vero $condizione_1_numero=true
+               //compreso tra A e Z
+            }
+            if ($condizione_1_numero && $condizione_1_maiuscola){
+                //password ok
+            }else {
+                //password non corretta
+            }
             if(strlen($password)<8){
                 return false;
             }
-            if(! is_numeric($password)){
+            if(substr($password)){
                 return false;
             }
             $this->password=$password;
@@ -82,6 +105,7 @@
     var_dump($voti);
     
     $s2 = new Studente("Bruno", "Bianchi");
+    $s2->setVoti([60,100,51,81]);
     ?>
 </body>
 
