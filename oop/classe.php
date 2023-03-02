@@ -55,7 +55,7 @@
             foreach($voti as $voto){
                 if($voto>=1 AND $voto<=100){
                     //voto accettabile
-                    return true;
+                    // return true;
                 }else{
                     //voto non accettabile
                     return false;
@@ -106,12 +106,12 @@
     $s1-> setdataNascita('1980-03-23') ;
     echo $s1->eta();
     echo "<hr>";
-    $s1-> setVoti(5);
-    var_dump($voti);
+    $s1-> setVoti([5,115]);
     
     $s2 = new Studente("Bruno", "Bianchi");
     $s2->setVoti([60,100,51,81]);
     $s2->setPassword("123456789");
+    //var_dump($voti);
     ?>
 </body>
 
