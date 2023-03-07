@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="inviaDati.php" method="GET">
+        <fieldset>
+            <legend>Dati di contatto</legend>
+            <label for="txtCognome">Cognome</label>
+            <input type="text" name="txtCognome" placeholder="inserisci il cognome">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            
+            <label for="mdrPreferito" contenteditable="true">Scegli il MdR:</label>
+            <input list="mdrPreferito">
+            <datalist id="mdrPreferito">
+                <option value="google">google</option>
+                <option value="bing">bing</option>
+                <option value="yahoo">yahoo</option>
+                <option value="yandex">yandex</option>
+            </datalist>
+        </fieldset>
+        <label for="dataNascita">Data di Nascita:</label>
+        <input type="date" name="dataNascita" id="dataNascita">
+        <fieldset>
+            <legend>Titolo di studio</legend>
+            <input type="radio" name="radTitoloDiStudio" id="licenzaMedia">
+            <label for="licenzaMedia">Licenza Media</label>
+            <input type="radio" name="radTitoloDiStudio" id="diplomaMaturita">
+            <label for="diplomaMaturita">Diploma Maturità</label>
+            <input type="radio" name="radTitoloDiStudio" id="diplomaIts">
+            <label for="diplomaIts">Diploma ITS</label>
+            <input type="radio" name="radTitoloDiStudio" id="laureaTriennale">
+            <label for="laureaTriennale">Laurea Triennale</label>
+            <input type="radio" name="radTitoloDiStudio" id="laureaMagistrale">
+            <label for="laureaMagistrale">Laurea Magistrale</label>
+        </fieldset>
+        
+        <textarea name="commento" id="commento" cols="90" rows="5">consegnare al 2 piano</textarea>
+        <section id="pulsanti">
+            <button type="submit">Invia Dati</button>
+            
+        </section>
+    </form>
+</body>
+
+</html>
