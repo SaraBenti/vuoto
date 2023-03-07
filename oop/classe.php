@@ -18,7 +18,7 @@
         public $cognome = "";
         public $ruolo = "";
         public $dataNascita;
-        private $password;
+        private $password;//come principio la get restituisce il valore, in questo caso dovrebbe 
         private $voti=[];
 
         function __construct($nomeDaAssegnare, $cognomeDaAssegnare)

@@ -55,6 +55,7 @@ try{
 //     var_dump($righe1);
 //     echo "</pre>";
 
+//questo punto si può fare nche con select max
 foreach ($righe1 as $key=>$value){
     if(!isset($max)){
         $max=$value['provincia_sigla'];

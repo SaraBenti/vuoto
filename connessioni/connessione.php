@@ -19,13 +19,23 @@
         //1 passaggio: connessione cioè istanza di un nuovo oggetto
         $con = new PDO($dsn, "root", "");
         echo "connessione effettuata";
+        $area_geografica="Sud";
+        $regione="Sicilia";
+
         //2 passaggio :prepara lo statement(query);$st sarà diverso per ogni query
         $sql = "SELECT* FROM citta 
             INNER JOIN regioni ON regioni.ID_regione=citta.regione
-             WHERE area_geografica='Sud'";
+             WHERE area_geografica=:area_geografica
+             AND regioni.regione=:regione";
         $st = $con->prepare($sql); // dentro il metodo prepare c'è il modo per restituire l'oggetto 
         echo "statement preparato";
         //3 bind - da fare
+            //bind=collegamento → problematica delle query dinamiche perchè il contenuto potrebbe ad es. cancellare qualcosa
+            //in un form ad es. un utente potrebbe scrivere qualsiasi cosa
+            //il bind verifica la correttezza di una variabile e il campo in cui la sto usando e va fatto prima di eseguire lo statement
+    $st->bindParam('area_geografica',$area_geografica, PDO::PARAM_STR);//pdo param str è di default
+    $st->bindParam('regione',$regione, PDO::PARAM_STR);
+
         //$st è un oggetto della classe PDOStatement
         //4 passaggio: eseguo lo statement preparato quindi si prende l'oggetto e si chiama execute
         $st->execute();
@@ -64,6 +74,9 @@
     //per casa
     //query di insert sulla tabella regioni 
     //poi la delete della stessa regione: metodo di PDOStatement che restituisce l'id del record appena inserito
+
+    //quanti sono gli elementi elencati?
+    $elementi= count($righe);
     ?>
 </body>
 
