@@ -1,6 +1,6 @@
 <?php
 include("file_da_includere/conn_db.php");
-include("include/funzioni_utili.php");
+include("file_da_includere/funzioni_utili.php");
 
 
 ?>
@@ -29,7 +29,8 @@ $prenotazioni= fz_sql("SELECT * FROM prenotazioni LIMIT 0,10");
 elenca_records($prenotazioni, 'ID_prenotazione');
 
 $nome_citta="Rimini";
-$citta=fz_sql("SELECT* FROM citta WHERE citta= :$nome_citta",[['segnaposto'=>"nome_citta",'var'=>$nome_citta]]); //:per attivare il bind e fare il controllo su questa variabile
+$citta=fz_sql("SELECT* FROM citta WHERE citta= :nome_citta",
+[['segnaposto'=>"nome_citta",'var'=>$nome_citta]]); //:per attivare il bind e fare il controllo su questa variabile
 elenca_records($citta, 'citta');
 
 ?>
