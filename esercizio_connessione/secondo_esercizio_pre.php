@@ -32,6 +32,10 @@ echo "<br>la città che c'è più volte è ".$max;
 class Regione {
     private $nome="";
     public $nr_citta_collegate="";
+
+    function construct($nome_regione){
+        $this->nome=$nome_regione; 
+    }
 }
 
 ?>
