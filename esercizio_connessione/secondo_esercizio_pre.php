@@ -32,9 +32,21 @@ echo "<br>la città che c'è più volte è ".$max;
 class Regione {
     private $nome="";
     public $nr_citta_collegate="";
-
     function construct($nome_regione){
         $this->nome=$nome_regione; 
+    }
+
+  
+    function getNumero(){
+        $dsn = "mysql:dbname=ifts;host=127.0.0.1";
+        bindParam('nome_regione',$this->nome)
+
+    }
+    function setNome($nome_regione){
+        $this->nome=$nome_regione; 
+    }
+    function getNome(){
+        return $this->nome;
     }
 }
 
