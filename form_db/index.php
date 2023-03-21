@@ -23,8 +23,8 @@
     ?>
 Seleziona l'area geografica
 <!--rendere dinamico questo form-->
-<form action="elenco_citta.php" method="POST">
-    <select name="area_geografica" >
+<form action="elenco_citta.php" method="POST"> 
+    <select name="area_geografica" > <!--proprietà name è quella che interessa nel server side-->
         <?php 
         foreach($righe as $riga){
             echo "<option >".$riga['area_geografica']."</option>";
@@ -33,6 +33,9 @@ Seleziona l'area geografica
         ?>
     </select>
     <button >OK</button>
+
+
+
 </form>
 </body>
 </html>
