@@ -11,6 +11,7 @@
 <body>
     <?php
     $a = [];
+    $somma=0;
    // echo $a[0]; //indice che però non trova niente perchè 
     //non ho dato valori all'interno dell'indice (chiave)
 
@@ -21,10 +22,12 @@
     //stampo il contenuto dell'array
     for ($i = 0; $i < 10; $i++){
          echo ($i+1). ") " .$a [$i] . "<br>";
+         $somma+=$a[$i];
 
     }
-
-    echo $a [0] + $a[1];
+$media=$somma/$i;
+    echo $a [0] + $a[1]."<br>";
+    echo $media;
  
     
    //→ho creato 10 posizioni con elemento 1

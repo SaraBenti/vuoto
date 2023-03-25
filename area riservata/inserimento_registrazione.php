@@ -48,8 +48,10 @@ include_once("./file_da_includere/conn_db.php");
 $sql="INSERT INTO utenti (ute_nome,ute_cognome, ute_email, ute_password, ute_icona, ute_cv)
     VALUES (:nome, :cognome,:email, :password, :icona, :cv)";
 $bind=[
-    ['segnaposto'=>nome,'var'=>$_REQUEST['nome']],
-]
+    ['segnaposto'=>"nome",'var'=>$_REQUEST['nome']],
+    ['segnaposto'=>"cognome",'var'=>$_REQUEST['cognome']]
+
+];
 fz_sql($sql,$bind);
 
 //da finire

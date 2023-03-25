@@ -89,9 +89,16 @@
 //numero medio di 5 estrazioni casuali
 //numeri casuali da 0 a 100
 //verificare se $num= al numero medio
+$num_medio=0;
+$num_da_calc=0;
+for ($i=0;$i<5;$i++){
+    $num=rand(0,100);
+    echo $num."<br>";
+    $num_da_calc+=$num;
+$num_medio=($num_da_calc)/5;
 
+}
 
-
-
+echo "il numero medio è ".$num_medio;
 
 ?>
