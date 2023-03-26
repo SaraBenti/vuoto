@@ -33,7 +33,7 @@ function min_in_array($a){ //isset cerca se quel valore è inizializzato($min)
 </head>
 <body>
     <?php
-   // scrivere una funzione che riceve come parametro di ingresso 
+  
 
    $a=["primo", "asecondo", "terzo"];
    $primo = min_in_array($a);

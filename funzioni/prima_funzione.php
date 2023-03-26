@@ -11,7 +11,7 @@
 function mia_somma($a,$b){
         $ris = $a + $b;
         return $ris;
-       // echo "ciao";//non viene mai eseguito perchè dopo il return
+    
 }
 
 

@@ -49,7 +49,7 @@ include("./citta.php");
         echo $e->getMessage();
     }
     //istanziare un nuovo oggetto di classe città per ogni citta selezionata
-//se avessi già la classe farei un ciclo per l'elenco delle città
+    //se avessi già la classe farei un ciclo per l'elenco delle città
     foreach ($righe as $riga) {
         $c = new Citta($riga['citta']);
         //stampare l'attributo nome dell'oggetto $c
