@@ -13,6 +13,18 @@ function elenca_chiavi_records($records,$chiavi){// qui $chiavi è un array
         }
     }
 }
+function data_db_2_user($data){
+    //$data = "1990-12-31";
+    $anno = substr($data, 0, 4);
+    $mese = substr($data,5,2);
+    $giorno = substr($data,8,2);
+    return $giorno."/".$mese."/".$anno;
+}
+function getAnno($data){
+    //$data = "1990-12-31";
+    $anno = substr($data, 0, 4);
+    return $anno;
+}
 
 
 
