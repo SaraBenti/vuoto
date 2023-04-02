@@ -13,7 +13,7 @@
 //chiave-valore&chiave-valore...
 //%40= @
 //variabili di sistema $_
-//$_ rray associativi che contengono le coppie chiavi-valori
+//$_ array associativi che contengono le coppie chiavi-valori
 foreach ($_GET as $k=>$v){
     if($k=='dataNascita'){
         $v=data_db_2_user($v);

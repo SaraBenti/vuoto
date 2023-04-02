@@ -52,6 +52,7 @@ include_once("./funzioni_utili.php");
     inner JOIN prenotazioni ON id_cliente=prenotazioni.cliente ORDER BY arrivo DESC limit 0,1");
     echo elenca_records($ultimo_arrivato, 'cognome') . elenca_records($ultimo_arrivato, 'nome');
     echo "<br>";
+    //echo "Ultimo cliente :" . $righe[0]['nome'] . " " . $righe[0]['cognome'];
 
     //giorni permanenza
     $giorni_permanenza = fz_sql("SELECT giorni_permanenza from prenotazioni;");
@@ -74,23 +75,7 @@ include_once("./funzioni_utili.php");
             $this->partenza = $partenza;
             $this->importo = $importo;
         }
-        function setPrenotazione()
-        {
-            $dsn = "mysql:dbname=ifts;host=127.0.0.1";
-            try {
-                $con = new PDO($dsn, "root", "");
-                $sql = "SELECT * FROM prenotazioni WHERE partenza=$this->partenza
-    AND importo=$this->importo";
-                $st = $con->prepare($sql);
-                //qui il bind non serve
-                $st->execute();
-                $righe = $st->fetchAll(PDO::FETCH_ASSOC);
-            } catch (PDOException $e) {
-                echo "Errore di connessione";
-                echo $e->getMessage();
-            }
-            return $righe;
-        }
+        
 
         function getPartenza()
         {
@@ -100,6 +85,16 @@ include_once("./funzioni_utili.php");
         {
             return $this->importo;
         }
+        static function getAnno($data){
+            return substr($data, 0, 4);
+        }
+        function partenzaInAnnoCorrente(){
+            if (Prenotazione::getAnno($this->partenza)==date("Y"))
+            return true;
+            return false;
+        }
+
+
     }
 
 

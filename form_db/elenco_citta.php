@@ -35,7 +35,7 @@ include("./citta.php");
     $dsn = "mysql:dbname=ifts;host=127.0.0.1";
     try {
         $con = new PDO($dsn, "root", "");
-        $sql = "SELECT * FROM citta JOIN regioni ON id_regione=regione WHERE area_geografica= :area_geografica";
+        $sql = "SELECT * FROM citta JOIN regioni ON id_regione=citta.regione WHERE area_geografica= :area_geografica";
         //quando abbiamo una variabile dinamica serve sempre il bind
         $st = $con->prepare($sql);
 

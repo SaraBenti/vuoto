@@ -32,7 +32,6 @@ function fz_sql($sql,$binds=[]){//per separare connessione e statement
     $righe=$st->fetchAll(PDO::FETCH_ASSOC);
     return $righe;
 }
-//$citta_del_sud=fz_sql("SELECT citta FROM citta INNER JOIN regioni ON regioni.ID_regione=citta.regione
-//WHERE area_geografica=:area_geografica",[['segnaposto'=>"area_geografica",'var'=>$area_geografica]]);
+
 
 ?>
