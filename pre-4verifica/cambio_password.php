@@ -32,8 +32,11 @@ echo("<tr><td><b>Cognome</b></td><td>".$queryResponse[0]['ute_cognome']."</td></
 echo("<tr><td><b>Email</b></td><td>".$queryResponse[0]['ute_email']."</td></tr>");
 echo("<tr><td><b>Vecchia Password</b></td><td>".$queryResponse[0]['ute_password']."</td></tr>");
 echo("</table>");
+
+
+
+echo "richiesta per il cambio password dall'utente id ".$id;
 ?>
 
-?>
 </body>
 </html>
