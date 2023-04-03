@@ -1,3 +1,7 @@
+<?php
+include_once("./conn_db.php");
+include_once("./funzioni_utili.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +12,26 @@
 </head>
 <body>
     <?php
-$dsn = "mysql:dbname=ifts;host=127.0.0.1";
-try{
-    $ute_email=$_REQUEST['ute_email'];
-    $ute_password=$_REQUEST['ute_password'];
-$con = new PDO($dsn, "root", "");
-$sql="INSERT INTO utenti (ute_email,ute_password) VALUES (:ute_email, :ute_password)";
-$st= $con->prepare($sql);
-//bind
-$st->bindParam('ute_email',$ute_email);
-$st->bindParam('ute_password',$ute_password);
-$st->execute();
-
-}catch (PDOException $e) {
-    echo "Errore di connessione";
-    echo $e->getMessage();
+foreach ($_POST as $k=>$v){
+   
+        echo "<br>". $k.": ".$v;
 }
-header("Location: index.php");
+    ?>
+    Elenco utenti appena inseriti: id ultimo inserito
+    <?php
+     $ute_email=$_REQUEST['ute_email'];
+     $ute_password=$_REQUEST['ute_password'];
+     $bind=[['segnaposto'=>":ute_email",'var'=>$ute_email],
+     ['segnaposto'=>":ute_password",'var'=>$ute_password]];
+$utente=fz_sql("INSERT INTO utenti (ute_email,ute_password) VALUES (:ute_email, :ute_password)",
+$bind);
+$id=fz_sql("SELECT ute_id FROM utenti order by ute_id desc limit 0,1");
+foreach ($id as $record){
+    echo $record['ute_id'];
+}
+
+echo "<a href='cambio_password.php?ute_id=".$record ['ute_id']."'>
+    Clicca per cambiare password </a><br>";
     ?>
 </body>
 </html>

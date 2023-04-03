@@ -30,16 +30,19 @@ include_once("./funzioni_utili.php");
      */
     $record_utenti = fz_sql("SELECT * FROM utenti");
     echo "il tot.dei record della tabella utenti è: " . count($record_utenti)."<br>";
-    $elenco_nome_cognome=fz_sql("SELECT ute_nome,ute_cognome FROM utenti");
-    print_r($elenco_nome_cognome);
-    $id=fz_sql("SELECT ute_id FROM utenti WHERE ute_nome='sara");
+   
 
-    echo "<a href='cambio_password.php?ute_id=$id'>
-    Clicca per cambiare password </a><br>";
+
+
 
     ?>
+
+
+
+
     Form - email e password
     <form action="campi_email_password.php" method="POST">
+
     Email<input type="mail" name="ute_email" value=" <?php 
        if(array_key_exists('ute_email',$_POST))
        echo $_POST['ute_email']; 
