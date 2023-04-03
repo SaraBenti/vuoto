@@ -30,6 +30,8 @@ include_once("./funzioni_utili.php");
      */
     $record_utenti = fz_sql("SELECT * FROM utenti");
     echo "il tot.dei record della tabella utenti è: " . count($record_utenti)."<br>";
+    $elenco_nome_cognome=elenca_records($record_utenti,'ute_nome');
+    echo $elenco_nome_cognome;
     ?>
     Form - email e password
     <form action="campi_email_password.php" method="POST">
