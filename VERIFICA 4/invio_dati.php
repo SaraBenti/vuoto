@@ -10,7 +10,7 @@
 
 <body>
     <?php
-   // print_r($_GET);
+    // print_r($_GET);
     foreach ($_GET as $k => $v) {
         if ($k == 'nome') {
             $nome = "%" . $v . "%";
@@ -25,25 +25,25 @@
     like :nome";
         $st = $con->prepare($sql);
         $st->bindParam("nome", $nome);
-      
+
         $st->execute();
         $righe = $st->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo "Errore di connessione";
         echo $e->getMessage();
     }
-   // print_r($righe);
+    // print_r($righe);
     foreach ($righe as $k => $riga) {
-        $dato1=$riga['regione'];
-       $dato2=$riga['ID_regione'];
-       echo "<a href='regione.php?ID_regione=".$dato2."'>
+        $dato1 = $riga['regione'];
+        $dato2 = $riga['ID_regione'];
+        echo "<a href='regione.php?ID_regione=" . $dato2 . "'>
     $dato1 </a><br>";
     }
     //echo $dato2;
+    
 
 
-    
-    
+
     ?>
 </body>
 
