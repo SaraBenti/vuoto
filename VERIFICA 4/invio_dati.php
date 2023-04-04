@@ -27,7 +27,7 @@
         $st = $con->prepare($sql);
         $st->bindParam("nome", $nome);//a differenza del bind value(che prende il valore)il param sostituisce il segnaposto con il contenuto
         //della variabile
-
+        //il terzo argomento del bind è il tipo che di default è stringa
         $st->execute();
         $righe = $st->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
