@@ -23,8 +23,10 @@
         $con = new PDO($dsn, "root", "");
         $sql = "SELECT * FROM regioni WHERE regione like :nome or area_geografica
     like :nome";
+    //quando ho il bind segno la variabile non con $variabile ma con :variabile
         $st = $con->prepare($sql);
-        $st->bindParam("nome", $nome);
+        $st->bindParam("nome", $nome);//a differenza del bind value(che prende il valore)il param sostituisce il segnaposto con il contenuto
+        //della variabile
 
         $st->execute();
         $righe = $st->fetchAll(PDO::FETCH_ASSOC);
