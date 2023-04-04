@@ -10,6 +10,7 @@
 
 <body>
     <?php
+    
     // print_r($_GET);
     foreach ($_GET as $k => $v) {
         if ($k == 'nome') {

@@ -11,6 +11,7 @@
 <body>
     <?php
     $id = $_GET['ID_regione'];
+    //TODO: non è stato fatto il controllo dell'esistenza di $:GET
     //echo $id;
     $dsn = "mysql:dbname=ifts;host=127.0.0.1";
     try {
