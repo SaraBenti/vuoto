@@ -14,7 +14,17 @@ function elenca_chiavi_records($records,$chiavi){// qui $chiavi è un array
     }
 }
 
+function autenticazione(){
+    if (! $_SESSION){
+        header("Location:index.php");//questo fa il redirect nel caso non sia stato fatto il login
+    }
+}
 
+function date2user($date){
+    $d=explode("-",$date);
+    Sgiorno=explode(" ",$d[2]);
+    return "$giorno[0]/{$d[1]}/{$d[0]}";
 
+}
 
 ?>
