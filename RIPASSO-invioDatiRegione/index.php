@@ -39,8 +39,16 @@ record.
 Opzionale: nella pagina regione.php inserire un form per aggiungere una
 nuova regione ed effettuare l’inserimento
 -->
+<h1>Form Dati</h1>
+<form action="invio_dati.php" method="POST">
+<table style="width:60%" border="1px solid black">
+<tr><td>Nome
+<input type="text" name="nome">
+<button type="submit">Invia dati</button>
+</td></tr>
+</table>
 
-<form action=""></form>
+</form>
     
 
 
