@@ -15,7 +15,7 @@ include_once("./file_da_includere/conn_db.php");
 
 <body>
     <?php
-    //print_r($_REQUEST);
+    print_r($_REQUEST);
 
     $id = $_REQUEST["id"];
 

@@ -15,6 +15,7 @@ include_once("./funzioni_utili.php");
 foreach ($_POST as $k=>$v){
    
         echo "<br>". $k.": ".$v;
+        echo "<br>";
 }
     ?>
     Elenco utenti appena inseriti: id ultimo inserito

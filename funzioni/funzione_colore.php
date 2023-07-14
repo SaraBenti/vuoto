@@ -7,20 +7,22 @@
 
 
 /**
- * Restituisce un colore in base al minuto corrente
+ * Restituisce un colore in base al giorno della settimana
  * @param 
  * @return string
  */
 function colore(){
-    $w=date ("i"); //giorno della settimana da 0 domenica a 6
+    $w=date ("w"); //giorno della settimana da 0 domenica a 6
     $colore= "";
     switch($w){
-        case 10: $colore="#ff0000";break;//1 corrisponde a lunedi
-        case 12: $colore="#00ffff";break;
-        case 13: $colore="#00ff00";break;
-        case 20: $colore="#0000ff";break;
+        case 1: $colore="#ff0000";break;//1 corrisponde a lunedi
+        case 2: $colore="#00ffff";break;//martedì
+        case 3: $colore="#00ff00";break;
+        case 4: $colore="#0000ff";break;
+        case 5: $colore="#ffff00";break;
+        case 6: $colore="#ff00ff";break;
         default:
-        $colore="#000000";
+        $colore="#000000";//domenica
     }
     return $colore;
 }
@@ -42,7 +44,7 @@ function colore(){
 //(es il lunedì restituisce il colore rosso, il martedì il colore giallo, ecc).
  echo colore();
  $colore= colore();
-echo date ("i");
+echo date ("w");
 
 
 

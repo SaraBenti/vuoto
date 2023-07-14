@@ -22,7 +22,7 @@ include_once("./funzioni_utili.php");
      *1. Indicare il numero di record presenti nella tabella utenti.
      *2. Creare un form con 2 campi: email e password
      *3. Selezionare dalla tabella utenti i record che hanno nei campi users e password
-     *quelli inseriti nel form precedente.
+     *quelli inseriti nel form precedente.(campi_email_password)
      *4. Se nel punto precedente è stato selezionato almeno un record, scrivere il nome,
      *cognome dei record selezionati
      *5. Inserire un link sui record del punto 4 alla pagina ./cambio_password.php passando
